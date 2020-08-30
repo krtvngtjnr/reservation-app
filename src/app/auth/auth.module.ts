@@ -4,6 +4,7 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { CommonModule } from '@angular/common';
 import { AuthService } from './shared/auth.service';
+import { FormsModule } from '@angular/forms';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -15,7 +16,11 @@ const routes: Routes = [
     LoginComponent,
     RegisterComponent
   ],
-  imports: [RouterModule.forChild(routes), CommonModule],
+  imports: [
+    RouterModule.forChild(routes),
+    CommonModule,
+    FormsModule
+  ],
   providers: [
     AuthService
   ],
